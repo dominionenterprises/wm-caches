@@ -27,6 +27,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.os.SystemClock;
 import android.util.Log;
 import android.view.Window;
@@ -79,7 +80,8 @@ public class SwipeActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_swipe);
-
+		StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+		StrictMode.setThreadPolicy(policy);
 
 		mCardContainer = (CardContainer) findViewById(R.id.layoutview);
 
@@ -379,7 +381,15 @@ public class SwipeActivity extends Activity {
 	}
 	public void addCards(){
 		for (int i = 0; i < prices.length; i++) {
-			adapter.add(new CardModel("Price is $" + prices[i], addresses[i], r.getDrawable(R.drawable.picture1)));
+			try {
+				Drawable drawable = drawableFromUrl(images[i]);
+				adapter.add(new CardModel("Price is $" + prices[i], addresses[i], drawable));
+			} catch (IOException e) {
+				System.out.println("error");
+			}
+
+
+
 		}
 
 	}
