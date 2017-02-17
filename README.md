@@ -62,6 +62,7 @@ TODO: Show the results schema for the /homes api
 
 ##Norfolk AIR Scraper##
 
+![Alt text](/norfolkair.png?raw=true "Norfolk Air")
 
 
 Norfolk Air is a web portal created by the City of Norfolk to allow residents of Norfolk to lookup information such as nearby schools, transit options and flood zone information. We wrote a web scraper that allows you to programmatically gather all the information the city of Norfolk has about an address. No solution existed to programmatically extract this data prior to this.
