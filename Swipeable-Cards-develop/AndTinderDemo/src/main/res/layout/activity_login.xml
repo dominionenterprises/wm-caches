@@ -12,13 +12,16 @@
 
     <!-- Login progress -->
 
-
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="100px">
+    </LinearLayout>
    <de.hdodenhof.circleimageview.CircleImageView
        xmlns:app="http://schemas.android.com/apk/res-auto"
        android:id="@+id/profile_image"
        android:paddingTop="0px"
-       android:layout_width="204dp"
-       android:layout_height="163dp"
+       android:layout_width="150dp"
+       android:layout_height="153dp"
        android:src="@drawable/logo"
        app:civ_border_width="1dp"
        app:civ_border_color="#FF000000"/>
@@ -34,17 +37,17 @@
 
     <ScrollView
         android:id="@+id/login_form"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:paddingTop="95dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
         <LinearLayout
             android:id="@+id/email_login_form"
-            android:layout_width="match_parent"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content">
 
                 <AutoCompleteTextView
@@ -52,6 +55,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/prompt_email"
+                    android:textColorHint="@android:color/white"
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
                     android:singleLine="true" />
@@ -59,13 +63,14 @@
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content">
 
                 <EditText
                     android:id="@+id/password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColorHint="@android:color/white"
                     android:hint="@string/prompt_password"
                     android:imeActionId="@+id/login"
                     android:imeActionLabel="@string/action_sign_in_short"
@@ -75,16 +80,45 @@
                     android:singleLine="true" />
 
             </android.support.design.widget.TextInputLayout>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:gravity="right"
+                android:text="Forgot Password"/>
 
             <Button
                 android:id="@+id/email_sign_in_button"
                 style="?android:textAppearanceSmall"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/action_sign_in"
+                android:layout_gravity="center"
+                android:paddingLeft="0px"
+                android:layout_width="fill_parent"
+                android:layout_height="38dp"
+                android:text="@string/action_sign_in_short"
+                android:background="#368ff1"
+                android:textColor="#FFFFFF"
                 android:textStyle="bold" />
-
         </LinearLayout>
     </ScrollView>
+
+
+
+    <LinearLayout
+
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="29dp"
+            android:layout_marginLeft="80dp"
+            android:gravity="center"
+            android:text="Don't have an account"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="29dp"
+            android:gravity="center"
+            android:textColor="#888888"
+            android:text=" Sign up"/>
+    </LinearLayout>
+
 </LinearLayout>
