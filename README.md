@@ -7,7 +7,7 @@ Our goal coming into HackU5 was to utilize big data to make lives better for res
 
 #Products:#
 Homes.com Public API
-Norfolk AIR WebScraper -> To Be Turned into an API
+Norfolk AIR WebScraper
 Homey
 
 ##Homes.com Public API##
@@ -18,6 +18,10 @@ In order to do any data project one must start with a data set. For this hackath
 **URL: homesapi.herokuapp.com**
 
 ####/homes####
+
+![Alt text](/homes.jpg?raw=true "Norfolk Air")
+
+
 The /homes endpoint allows you to search for a number of houses by zipcode
 
 GET Parameters
@@ -62,7 +66,7 @@ TODO: Show the results schema for the /homes api
 
 ##Norfolk AIR Scraper##
 
-![Alt text](/norfolkair.png?raw=true "Norfolk Air")
+![Alt text](/norfolk_air.png?raw=true "Norfolk Air")
 
 
 Norfolk Air is a web portal created by the City of Norfolk to allow residents of Norfolk to lookup information such as nearby schools, transit options and flood zone information. We wrote a web scraper that allows you to programmatically gather all the information the city of Norfolk has about an address. No solution existed to programmatically extract this data prior to this.
