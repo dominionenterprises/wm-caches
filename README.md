@@ -1,2 +1,57 @@
 # wm-caches
 DE Hack U 5 Student Repository
+
+#Summary#
+
+Our goal coming into HackU5 was to utilize big data to make lives better for residents in Hampton Roads. We decided to use data from Homes.com, The City of Norfolk, Yelp and MyLocalCrime.com to help Norfolk residents find a home that they want to live in. We designed an Android application called **Homey** which has a similar User Experience to the popular dating app Tinder to find houses in the Norfolk area that match a user's tastes.
+
+#Products:#
+Homes.com Public API
+Norfolk AIR WebScraper -> To Be Turned into an API
+Homey
+
+##Homes.com Public API##
+
+In order to do any data project one must start with a data set. For this hackathon we decided to use the home listings from Homes.com. We wrote a public API to allow Hampton Roads Developers to use Homes.com listings in their projects. 
+
+###API Specifications###
+**URL: homesapi.herokuapp.com**
+
+####/homes####
+The /homes endpoint allows you to search for a number of houses by zipcode
+
+GET Parameters
+| Param        | Data Type           | Description  |
+| ------------- |:-------------:| -----:|
+| number      | integer | The number of homes to return|
+| zipcode      | integer      |   The zipcode(s) that you want to search homes in |
+
+Return Values
+| Field        | Data Type           | Description  |
+| ------------- |:-------------:| -----:|
+| number      | integer | The number of homes to return|
+| zipcode      | integer      |   The zipcode(s) that you want to search homes in |
+
+####/matches####
+The /matches endpoint returns a number of matches based on our recommendation engine
+GET Parameters
+| Param        | Data Type           | Description  |
+| ------------- |:-------------:| -----:|
+| number      | integer | The number of matches to return|
+
+Return Values
+| Field        | Data Type           | Description  |
+| ------------- |:-------------:| -----:|
+| street_address      | string | The address of the street|
+| postal_code      | integer      |   The zipcode of the home |
+| city      | string      |   City of the house |
+| state      | string      |   State the house is located in |
+| main_uri      | string      |   Url to the Homes.com listing |
+| price      | integer      |   The price of the house |
+| primary_image      | string      |   Url to the primary image of the house |
+| crime_url      | string      |   Url to recent crimes near the listing |
+| food_score      | integer      |   Average Yelp rating  |
+| restaurant_search_url      | string      |  Url to Yelp search showing restaurants |
+
+Description
+
