@@ -35,7 +35,7 @@ import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 
-public class MainActivity extends Activity {
+public class SwipeActivity extends Activity {
 
 	/**
 	 * This variable is the container that will host our cards
