@@ -19,7 +19,6 @@ package com.andtinder.demo;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
@@ -51,7 +50,7 @@ public class SwipeActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		setContentView(R.layout.mainlayout);
+		setContentView(R.layout.activity_swipe);
 
 
 		mCardContainer = (CardContainer) findViewById(R.id.layoutview);
