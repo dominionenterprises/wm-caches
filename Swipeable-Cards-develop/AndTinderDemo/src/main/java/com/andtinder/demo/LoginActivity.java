@@ -229,7 +229,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                mTextView.setText("That didn't work!");
+                mTextView.setText("");
             }
         });
 // Add the request to the RequestQueue.

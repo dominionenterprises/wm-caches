@@ -45,7 +45,8 @@
             android:label="@string/title_activity_form"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".OptionalFormActivity" />
-        <activity android:name=".EndActivity"></activity>
+        <activity android:name=".EndActivity" />
+        <activity android:name=".CardActivity"></activity>
     </application>
 
 </manifest>

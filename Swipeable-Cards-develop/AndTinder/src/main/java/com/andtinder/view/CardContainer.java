@@ -29,6 +29,7 @@ import com.andtinder.R;
 import com.andtinder.model.CardModel;
 import com.andtinder.model.Orientations.Orientation;
 
+import java.util.Calendar;
 import java.util.Random;
 
 public class CardContainer extends AdapterView<ListAdapter> {
@@ -58,7 +59,7 @@ public class CardContainer extends AdapterView<ListAdapter> {
 
     //TODO: determine max dynamically based on device speed
     private int mMaxVisible = 10;
-    private GestureDetector mGestureDetector;
+    public GestureDetector mGestureDetector;
     private int mFlingSlop;
     private Orientation mOrientation;
     private ListAdapter mListAdapter;
@@ -225,6 +226,8 @@ public class CardContainer extends AdapterView<ListAdapter> {
         }
     }
 
+
+
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
         super.onLayout(changed, l, t, r, b);
@@ -248,9 +251,10 @@ public class CardContainer extends AdapterView<ListAdapter> {
             return false;
         }
         if (mGestureDetector.onTouchEvent(event)) {
+            Log.d("CardCaontiner", "OnTouchEvent");
             return true;
         }
-        Log.d("Touch Event", MotionEvent.actionToString(event.getActionMasked()) + " ");
+//        Log.d("Touch Event", MotionEvent.actionToString(event.getActionMasked()) + " ");
         final int pointerIndex;
         final float x, y;
         final float dx, dy;
@@ -342,6 +346,7 @@ public class CardContainer extends AdapterView<ListAdapter> {
             return false;
         }
         if (mGestureDetector.onTouchEvent(event)) {
+            Log.d("Helpo", "OnInterceptTouchEvent");
             return true;
         }
         final int pointerIndex;
@@ -426,6 +431,13 @@ public class CardContainer extends AdapterView<ListAdapter> {
     }
 
     private class GestureListener extends SimpleOnGestureListener {
+        @Override
+        public boolean onSingleTapUp(MotionEvent e) {
+            Log.d("CardContainer", "Single Tap Up");
+
+            return super.onSingleTapUp(e);
+        }
+
         @Override
         public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
             Log.d("Fling", "Fling with " + velocityX + ", " + velocityY);

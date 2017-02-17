@@ -30,6 +30,7 @@ import android.os.Bundle;
 import android.os.StrictMode;
 import android.os.SystemClock;
 import android.util.Log;
+import android.view.View;
 import android.view.Window;
 import android.widget.Toast;
 
@@ -84,7 +85,6 @@ public class SwipeActivity extends Activity {
 		StrictMode.setThreadPolicy(policy);
 
 		mCardContainer = (CardContainer) findViewById(R.id.layoutview);
-
 		r = getResources();
 
 		adapter = new SimpleCardStackAdapter(this);
@@ -383,7 +383,9 @@ public class SwipeActivity extends Activity {
 		for (int i = 0; i < prices.length; i++) {
 			try {
 				Drawable drawable = drawableFromUrl(images[i]);
-				adapter.add(new CardModel("Price is $" + prices[i], addresses[i], drawable));
+				Bitmap bitmap= ((BitmapDrawable) drawable).getBitmap();
+				Drawable d = new BitmapDrawable(getResources(), Bitmap.createScaledBitmap(bitmap, 480,313, true));
+				adapter.add(new CardModel("Price is $" + prices[i], addresses[i], d));
 			} catch (IOException e) {
 				System.out.println("error");
 			}
