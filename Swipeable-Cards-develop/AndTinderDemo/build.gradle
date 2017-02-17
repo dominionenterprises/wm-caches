@@ -33,6 +33,10 @@ dependencies {
     compile 'com.google.android.gms:play-services-appindexing:9.8.0'
     compile 'com.android.support:design:23.4.0'
     compile 'com.yahoo.mobile.client.android.util.rangeseekbar:rangeseekbar-library:0.1.0'
+    compile 'org.springframework.android:spring-android-rest-template:2.0.0.M3'
+
+    compile 'com.android.volley:volley:1.0.0'
+
     compile 'de.hdodenhof:circleimageview:2.1.0'
     testCompile 'junit:junit:4.12'
     testCompile 'org.mockito:mockito-core:1.10.19'
@@ -40,4 +44,9 @@ dependencies {
     testCompile 'org.powermock:powermock-module-junit4:1.6.2'
     testCompile 'org.hamcrest:hamcrest-library:1.1'
     testCompile 'com.openpojo:openpojo:0.8.0'
+}
+repositories {
+    maven {
+        url 'https://repo.spring.io/libs-milestone'
+    }
 }

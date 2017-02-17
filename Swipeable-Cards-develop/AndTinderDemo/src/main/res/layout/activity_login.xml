@@ -1,26 +1,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:fitsSystemWindows="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
     android:background="@drawable/house"
     tools:context="com.andtinder.demo.LoginActivity">
 
     <!-- Login progress -->
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="100px">
-    </LinearLayout>
    <de.hdodenhof.circleimageview.CircleImageView
        xmlns:app="http://schemas.android.com/apk/res-auto"
        android:id="@+id/profile_image"
-       android:paddingTop="0px"
+       android:layout_marginTop="70dp"
        android:layout_width="150dp"
        android:layout_height="153dp"
        android:src="@drawable/logo"
@@ -38,7 +32,7 @@
 
     <ScrollView
         android:id="@+id/login_form"
-        android:paddingTop="95dp"
+        android:paddingTop="160dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
         <LinearLayout
@@ -95,6 +89,7 @@
                 android:paddingLeft="0px"
                 android:layout_width="fill_parent"
                 android:layout_height="38dp"
+                android:textSize="18dp"
                 android:text="@string/action_sign_in_short"
                 android:background="#368ff1"
                 android:textColor="#FFFFFF"
@@ -125,5 +120,10 @@
             style="?android:attr/borderlessButtonStyle"
             android:text=" Sign up"/>
     </LinearLayout>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/internet_text"/>
 
 </LinearLayout>
