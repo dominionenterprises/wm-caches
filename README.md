@@ -21,25 +21,30 @@ In order to do any data project one must start with a data set. For this hackath
 The /homes endpoint allows you to search for a number of houses by zipcode
 
 GET Parameters
+
 | Param        | Data Type           | Description  |
 | ------------- |:-------------:| -----:|
 | number      | integer | The number of homes to return|
 | zipcode      | integer      |   The zipcode(s) that you want to search homes in |
 
 Return Values
+
 | Field        | Data Type           | Description  |
 | ------------- |:-------------:| -----:|
 | number      | integer | The number of homes to return|
 | zipcode      | integer      |   The zipcode(s) that you want to search homes in |
 
 ####/matches####
+
 The /matches endpoint returns a number of matches based on our recommendation engine
 GET Parameters
+
 | Param        | Data Type           | Description  |
 | ------------- |:-------------:| -----:|
 | number      | integer | The number of matches to return|
 
 Return Values
+
 | Field        | Data Type           | Description  |
 | ------------- |:-------------:| -----:|
 | street_address      | string | The address of the street|
