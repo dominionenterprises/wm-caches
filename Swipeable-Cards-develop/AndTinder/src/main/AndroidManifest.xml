@@ -2,7 +2,7 @@
     package="com.andtinder">
 
     <uses-sdk
-        android:minSdkVersion="13"
+        android:minSdkVersion="15"
          />
 
 

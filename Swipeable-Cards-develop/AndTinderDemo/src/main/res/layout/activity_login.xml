@@ -1,5 +1,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
@@ -83,6 +84,7 @@
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
                 android:gravity="right"
                 android:text="Forgot Password"/>
 
@@ -101,23 +103,26 @@
     </ScrollView>
 
 
-
     <LinearLayout
-
+        android:fitsSystemWindows="true"
         android:layout_width="fill_parent"
         android:layout_height="60dp"
         android:orientation="horizontal">
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="29dp"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="80dp"
             android:gravity="center"
-            android:text="Don't have an account"/>
-        <TextView
+            android:text="Don't have an account?"/>
+        <Button
+            android:id="@+id/email_register_button"
             android:layout_width="wrap_content"
-            android:layout_height="29dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-15dp"
             android:gravity="center"
             android:textColor="#888888"
+            android:textSize="10dp"
+            style="?android:attr/borderlessButtonStyle"
             android:text=" Sign up"/>
     </LinearLayout>
 
