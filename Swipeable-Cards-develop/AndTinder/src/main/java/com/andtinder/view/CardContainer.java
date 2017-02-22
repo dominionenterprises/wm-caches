@@ -70,18 +70,21 @@ public class CardContainer extends AdapterView<ListAdapter> {
     private int mGravity;
     private int mNextAdapterPosition;
     private boolean mDragging;
+    private OnCardClickListener listener;
 
     private boolean locked = false;
 
     public CardContainer(Context context) {
-        super(context);
 
+        super(context);
         setOrientation(Orientation.Disordered);
         setGravity(Gravity.CENTER);
         init();
 
     }
-
+    public void setListener(OnCardClickListener listener){
+        this.listener = listener;
+    }
     public CardContainer(Context context, AttributeSet attrs) {
         super(context, attrs);
         initFromXml(attrs);
@@ -434,7 +437,7 @@ public class CardContainer extends AdapterView<ListAdapter> {
         @Override
         public boolean onSingleTapUp(MotionEvent e) {
             Log.d("CardContainer", "Single Tap Up");
-
+            listener.OnCardClick(mNextAdapterPosition - 1);
             return super.onSingleTapUp(e);
         }
 
@@ -455,6 +458,9 @@ public class CardContainer extends AdapterView<ListAdapter> {
         }
     }
 
+    public interface OnCardClickListener{
+        void OnCardClick( int position );
+    }
     /**
      * Public function for allow dismiss cards directly from the CardContainer
      * IE: mCardContainer.leave(-1000, 45);

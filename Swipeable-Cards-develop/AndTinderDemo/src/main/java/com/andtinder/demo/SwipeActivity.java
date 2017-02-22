@@ -32,6 +32,8 @@ import android.os.SystemClock;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
+import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -66,14 +68,15 @@ public class SwipeActivity extends Activity {
 	 * See https://g.co/AppIndexing/AndroidStudio for more information.
 	 */
 	private GoogleApiClient client;
-	public volatile String[] addresses = new String[5];
-	public volatile String[] images = new String[5];
-	public volatile String[] crimes = new String[5];
-	public volatile String[] links = new String[5];
-	public volatile String[] prices = new String[5];
+	public static volatile String[] addresses = new String[5];
+	public static volatile String[] images = new String[5];
+	public static volatile String[] crimes = new String[5];
+	public static volatile String[] links = new String[5];
+	public static volatile String[] prices = new String[5];
 
 	public volatile boolean result = false;
 	public volatile boolean temp;
+    public int count = 0;
 	public SimpleCardStackAdapter adapter;
 	public Resources r;
 	@Override
@@ -85,10 +88,33 @@ public class SwipeActivity extends Activity {
 		StrictMode.setThreadPolicy(policy);
 
 		mCardContainer = (CardContainer) findViewById(R.id.layoutview);
+        mCardContainer.setListener(new CardContainer.OnCardClickListener() {
+            @Override
+            public void OnCardClick(int position) {
+                if ((count++) == 2){
+                    Intent intent = new Intent(getBaseContext(), CardActivity.class);
+                    intent.putExtra("Index", 2);
+                    startActivity(intent);
+                }
+                Log.d("position", position + "");
+            }
+        });
+
 		r = getResources();
 
 		adapter = new SimpleCardStackAdapter(this);
 
+
+        Button mYelp = (Button) findViewById(R.id.next_button_form);
+//        //mEmailRegisterButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(getBaseContext(), OptionalFormActivity.class);
+//                intent.putExtra("testIntent2", false);
+//                startActivity(intent);
+//
+//            }
+//        });
 		client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
 		//System.out.println("" + getHit());
 		/*
@@ -342,7 +368,7 @@ public class SwipeActivity extends Activity {
 
 	public void completeOnCreate(){
 		addCards();
-		CardModel cardModel = new CardModel("New Title 11", "World", r.getDrawable(R.drawable.picture1));
+		/*CardModel cardModel = new CardModel("New Title 11", "World", r.getDrawable(R.drawable.picture1));
 		cardModel.setOnClickListener(new CardModel.OnClickListener() {
 			@Override
 			public void OnClickListener() {
@@ -373,7 +399,7 @@ public class SwipeActivity extends Activity {
 		});
 
 		adapter.add(cardModel);
-
+        */
 		mCardContainer.setAdapter(adapter);
 		// ATTENTION: This was auto-generated to implement the App Indexing API.
 		// See https://g.co/AppIndexing/AndroidStudio for more information.
