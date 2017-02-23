@@ -11,10 +11,13 @@ Our goal coming into HackU5 was to utilize big data to make lives better for res
 
 #Products:#
 Homes.com Public API
+
 Norfolk AIR WebScraper
+
 Homey
 
 ##Homes.com Public API##
+![Alt text](/homes.jpg?raw=true "Norfolk Air")
 
 In order to do any data project one must start with a data set. For this hackathon we decided to use the home listings from Homes.com. We wrote a public API to allow Hampton Roads Developers to use Homes.com listings in their projects. 
 
@@ -22,9 +25,6 @@ In order to do any data project one must start with a data set. For this hackath
 **URL: homesapi.herokuapp.com**
 
 ####/homes####
-
-![Alt text](/homes.jpg?raw=true "Norfolk Air")
-
 
 The /homes endpoint allows you to search for a number of houses by zipcode
 
@@ -39,8 +39,6 @@ Return Values
 
 | Field        | Data Type           | Description  |
 | ------------- |:-------------:| -----:|
-| number      | integer | The number of homes to return|
-| zipcode      | integer      |   The zipcode(s) that you want to search homes in |
 
 ####/matches####
 
