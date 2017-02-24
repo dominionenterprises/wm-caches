@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_optional_data"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.andtinder.demo.OptionalFormActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/house"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="60dp"
+            android:textSize="25dp"
+            android:gravity="center_horizontal"
+            android:text="Fine tune your results."/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="0dp"
+            android:textSize="20dp"
+            android:gravity="center_horizontal"
+            android:text="How important are these factors?"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:textColor="#FFFFFF"
+                android:textSize="15dp"
+                android:gravity="bottom"
+                android:text="Schools:"
+                android:id="@+id/school_label" />
+            <RatingBar
+                android:theme="@style/RatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rating="3"
+                android:stepSize="0.5"
+                android:numStars="5"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="0dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:textColor="#FFFFFF"
+                android:textSize="15dp"
+                android:gravity="bottom"
+                android:text="Crime:"
+                android:id="@+id/crime_label" />
+            <RatingBar
+                android:theme="@style/RatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rating="3"
+                android:stepSize="0.5"
+                android:numStars="5"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="0dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity=""
+                android:layout_marginLeft="20dp"
+                android:textColor="#FFFFFF"
+                android:textSize="15dp"
+                android:gravity="bottom"
+                android:text="Entertainment:"
+                android:id="@+id/entertainment_label" />
+            <RatingBar
+                android:theme="@style/RatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rating="3"
+                android:stepSize="0.5"
+                android:numStars="5"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/next_button_optional"
+            android:layout_marginTop="120dp"
+            android:layout_marginLeft="265dp"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:background="#368ff1"
+            android:textColor="#FFFFFF"
+            android:text="Next"/>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
