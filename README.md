@@ -12,7 +12,7 @@ Our goal coming into HackU5 was to utilize big data to make lives better for res
 #Products:#
 [Homes.com Public API](https://github.com/NickRance/homesapi2/)
 
-Norfolk AIR WebScraper
+[Norfolk AIR WebScraper](https://github.com/NickRance/norfolkairscraper)
 
 Homey
 
@@ -66,7 +66,7 @@ Return Values
 
 TODO: Show the results schema for the /homes api
 
-##Norfolk AIR Scraper##
+[##Norfolk AIR Scraper##](https://github.com/NickRance/norfolkairscraper)
 
 ![Alt text](/norfolk_air.png?raw=true "Norfolk Air")
 
