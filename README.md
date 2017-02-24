@@ -69,7 +69,7 @@ TODO: Show the results schema for the /homes api
 ##Norfolk AIR Scraper##
 
 ![Alt text](/norfolk_air.png?raw=true "Norfolk Air")
-![Alt text](/400%20granby%20json.png?raw=true "Norfolk Air")
+![Alt text](/400%20granby%20json.PNG?raw=true)
 
 
 
