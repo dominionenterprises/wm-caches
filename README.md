@@ -82,6 +82,9 @@ TODO: Create a public API and database for all properties in Norfolk.
 ##Homey##
 
 Homey is an app that allows users to find houses in the Norfolk area through a card matching User Experience. It pulls the most important information from the Norfolk AIR Scraper, Homes.com, Yelp and other endpoints to help future homeowners easily create a list of homes on which to perform further research.
+
+Build AndTinderDemo in Android Studio
+
 ##Gitter##
 Join us on gitter to talk about our project and help us build products that enhance Norfolk.
 [Gitter](https://gitter.im/wm-caches/Lobby)
