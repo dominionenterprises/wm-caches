@@ -10,7 +10,7 @@
 Our goal coming into HackU5 was to utilize big data to make lives better for residents in Hampton Roads. We decided to use data from Homes.com, The City of Norfolk, Yelp and MyLocalCrime.com to help Norfolk residents find a home that they want to live in. We designed an Android application called **Homey** which has a similar User Experience to the popular dating app Tinder to find houses in the Norfolk area that match a user's tastes.
 
 #Products:#
-Homes.com Public API
+[Homes.com Public API](https://github.com/NickRance/homesapi2/)
 
 Norfolk AIR WebScraper
 
